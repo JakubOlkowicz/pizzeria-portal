@@ -17,7 +17,7 @@ import Events from './components/views/Events/Events';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename={'/panel'}>
+      <BrowserRouter basename={''}>
         <MainLayout>
           <Switch>
             <Route exact path={`${process.env.PUBLIC_URL}/`} component={Homepage} />
