@@ -1,15 +1,17 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import Button from '@material-ui/core/Button';
+
 // import PropTypes from 'prop-types';
-// import styles from './PageNav.module.scss';
+import styles from './PageNav.module.scss';
 
 const PageNav = () => (
-  <nav>
-    <NavLink exact to={`${process.env.PUBLIC_URL}/`} activeClassName='active'>Home</NavLink>  
-    <NavLink exact to={`${process.env.PUBLIC_URL}/login`} activeClassName='active'>Login</NavLink>
-    <NavLink exact to={`${process.env.PUBLIC_URL}/kitchen`} activeClassName='active'>Kitchen</NavLink>
-    <NavLink exact to={`${process.env.PUBLIC_URL}/tables`} activeClassName='active'>tables</NavLink>
-    <NavLink exact to={`${process.env.PUBLIC_URL}/waiter`} activeClassName='active'>Waiter</NavLink>
+  <nav className={styles.component}>
+    <Button className={styles.link} exact component={NavLink} to={`${process.env.PUBLIC_URL}/`} activeClassName='active'>Home</Button>  
+    <Button className={styles.link} component={NavLink} to={`${process.env.PUBLIC_URL}/login`} activeClassName='active'>Login</Button>
+    <Button className={styles.link} component={NavLink} to={`${process.env.PUBLIC_URL}/kitchen`} activeClassName='active'>Kitchen</Button>
+    <Button className={styles.link} component={NavLink} to={`${process.env.PUBLIC_URL}/tables`} activeClassName='active'>tables</Button>
+    <Button className={styles.link} component={NavLink} to={`${process.env.PUBLIC_URL}/waiter`} activeClassName='active'>Waiter</Button>
   </nav>
 );
 

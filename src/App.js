@@ -12,27 +12,43 @@ import NewBooking from './components/views/NewBooking/NewBooking';
 import Booking from './components/views/Booking/Booking';
 import NewEvents from './components/views/NewEvents/NewEvents';
 import Events from './components/views/Events/Events';
+import { StylesProvider, ThemeProvider } from '@material-ui/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#2b4c6f',
+    },
+    // secondary: {
+    //   main: '#11cb5f',
+    // },
+  },
+});
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter basename={''}>
-        <MainLayout>
-          <Switch>
-            <Route exact path={`${process.env.PUBLIC_URL}/`} component={Homepage} />
-            <Route path={process.env.PUBLIC_URL + '/login'} component={Login} />
-            <Route path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
-            <Route path={process.env.PUBLIC_URL + '/tables'} component={Tables} />
-            <Route path={process.env.PUBLIC_URL + '/tables/booking/new'} component = {NewBooking}/>  
-            <Route path={process.env.PUBLIC_URL + '/tables/booking/123'} component = {Booking}/>
-            <Route path={process.env.PUBLIC_URL + '/tables/events/new'} component = {NewEvents}/>  
-            <Route path={process.env.PUBLIC_URL + '/tables/events/123'} component = {Events}/>
-            <Route path={process.env.PUBLIC_URL + '/waiter'} component={Waiter} />
-            <Route path={process.env.PUBLIC_URL + '/waiter/order/new'} component = {NewOrder}/>  
-            <Route path={process.env.PUBLIC_URL + '/waiter/order/123'} component = {Order}/>
-          </Switch>
-        </MainLayout>
+      <BrowserRouter>
+        <StylesProvider injectFirst>
+          <ThemeProvider theme={theme}>
+            <MainLayout>
+              <Switch>
+                <Route exact path={`${process.env.PUBLIC_URL}/`} component={Homepage} />
+                <Route path={process.env.PUBLIC_URL + '/login'} component={Login} />
+                <Route path={process.env.PUBLIC_URL + '/kitchen'} component={Kitchen} />
+                <Route path={process.env.PUBLIC_URL + '/tables'} component={Tables} />
+                <Route path={process.env.PUBLIC_URL + '/tables/booking/new'} component = {NewBooking}/>  
+                <Route path={process.env.PUBLIC_URL + '/tables/booking/123'} component = {Booking}/>
+                <Route path={process.env.PUBLIC_URL + '/tables/events/new'} component = {NewEvents}/>  
+                <Route path={process.env.PUBLIC_URL + '/tables/events/123'} component = {Events}/>
+                <Route path={process.env.PUBLIC_URL + '/waiter'} component={Waiter} />
+                <Route path={process.env.PUBLIC_URL + '/waiter/order/new'} component = {NewOrder}/>  
+                <Route path={process.env.PUBLIC_URL + '/waiter/order/123'} component = {Order}/>
+              </Switch>
+            </MainLayout>
+          </ThemeProvider>
+        </StylesProvider>
       </BrowserRouter>
     </div>
   );
