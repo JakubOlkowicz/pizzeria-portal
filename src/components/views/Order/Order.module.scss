@@ -1,9 +1,13 @@
 @import '../../../styles/settings.scss';
 
-.btn {
-    margin: auto;
+.component {
+  padding: $base-size;
+  margin-top: 20px;
 }
-  
-  .margin {
-    margin-bottom: 50px;
+.btn {
+  margin: auto;
+  padding: 10px;
+}
+.margin {
+  margin-bottom: 50px;
 }

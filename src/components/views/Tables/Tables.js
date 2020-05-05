@@ -72,7 +72,7 @@ const Tables = () => (
             {table.status.map((reservation) => (
               <TableRow key={reservation.id}>
                 <TableCell className={styles.tableBody}>
-                  <Button component={Link} to={`${process.env.PUBLIC_URL}${reservation.reservation === 'reservation' ? '/booking/123' : '/events/event/123'}`}>{reservation.reservation}</Button>
+                  <Button component={Link} to={`${process.env.PUBLIC_URL}${reservation.reservation === 'reservation' ? '/tables/booking/123' : '/tables/events/123'}`}>{reservation.reservation}</Button>
                 </TableCell>
                 <TableCell className={styles.tableBody}>{reservation.time}</TableCell>
                 <TableCell className={styles.tableBody}>{reservation.details}</TableCell>
