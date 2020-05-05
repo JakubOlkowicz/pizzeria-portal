@@ -16,6 +16,7 @@ const MainLayout = (props) => (
     </AppBar>
     <Container maxWidth='lg'>
       <Toolbar />
+
       {props.children}
     </Container>
   </div>

@@ -10,3 +10,16 @@
 .head {
     margin: 25px 0;
 }
+.buttonsWrapper {
+    display: flex;
+    justify-content: center;
+    padding: $base-size;
+}
+.tableHead{
+    border: 1px #2b4c6f solid;
+    padding: 0 10px;
+}
+.tableBody{
+    padding: 0 10px;
+    width: 33.3%;
+}

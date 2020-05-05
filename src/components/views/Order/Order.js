@@ -14,7 +14,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
 const Order = () => (
-  <Card>
+  <Card className={styles.component}>
     <CardContent align='center'>
       <Typography component='p' color='primary' gutterBottom>
         Edit Order
